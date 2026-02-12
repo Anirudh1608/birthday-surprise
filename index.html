@@ -125,7 +125,7 @@ canvas {
 
 <div class="card" id="card">
     <h1>Happy Birthday, Rishika 🎂🎉</h1>
-    <img src="rishika.jpg" class="photo">
+    <img src="rishika.jpg" class="photo" loading="lazy" style="display:none;" id="hiddenImg">
     <p id="message"></p>
     <strong>Your forever friend Anirudh 🤗</strong>
 </div>
@@ -208,7 +208,7 @@ function startBigCountdown() {
 
 /* SHOW CARD */
 function showBirthdayCard() {
-    document.getElementById("card").style.display = "block";
+    document.getElementById("hiddenImg").style.display = "block";
     const music = document.getElementById("music");
     music.play().catch(()=>console.log("Autoplay blocked"));
     startConfetti();
@@ -263,4 +263,5 @@ function animateConfetti(){
 </body>
 
 </html>
+
 
